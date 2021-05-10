@@ -1,0 +1,404 @@
+
+@import url(../css/fonts.css);
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+
+    /*  Theme Colors   */
+   --text-gray:#3f4954;
+   --text-light:#686666da;
+   --red:#d90429;
+   --black:#000000;
+   --white:#ffffff;
+   --midnight:#104f55;
+
+ /*      gradient color      */
+ --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*   theme font-family   */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend',cursive;
+    --Livvic:'Livvic',cursive;
+}
+
+/*------------Global CLasses---------------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type:none;
+}
+
+h1{
+    font-family: var(--Livvic);
+    font-size: 2.5rem;
+}
+
+button.btn{
+    border: none;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+
+}
+
+/*-------x----Global CLasses------x--------*/
+
+/*--------------navbar-----------*/
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 13vh;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content:space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height:30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin:0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-family: var(--Livvic);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family:var(--Josefin);
+    font-size: 2rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover{
+   flex-direction: column;
+}
+
+/*--------x-----navbar-------x---*/
+
+
+/*---------------------Main Content---------------------*/
+
+/*---------------------Site title-----------------------*/
+main .site-title{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../assets/1575457131phplShJvE.jpeg);
+    background-size: cover;
+    height: 113vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 12rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title .btn{
+    display: inline-block;
+    margin: 1.5rem;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    font-size: 17px;
+}
+
+main .site-title .btn:hover{
+    background: #f44336;
+    border: 1px solid var(--white);
+    color:white;
+    transition: 0.5s;
+
+}
+
+/*----------x----------Site title-------------x---------*/
+
+/*----------x----------Main Content------------x---------*/
+
+
+
+/*           Viewport less than or equal to 750px            */
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu,.nav .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+/*      x    Viewport less than or equal to 750px      x    */
+
+
+
+/*-----------------About us page--------------------------*/
+
+main .site-about{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../assets/university-pic5.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .title-background{
+    padding-top: 6rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 4rem;
+    font-family: var(--Josefin);
+}
+/*------------1st----------------------*/
+main .row{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h5{
+    font-size: 33px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 12px;
+    
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 00.2s;
+}
+ 
+h5{
+    text-align: center;
+    font-weight: 600;
+}
+
+.course-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+
+ @media(max-width: 750px){
+     .row{
+         flex-direction: column;
+     }
+ }
+/*-----x------1st------------x--------*/
+
+/*------------2nd----------------------*/
+main .row2{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h6{
+    font-size: 33px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 12px;
+    
+}
+
+.course-col2{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 00.2s;
+}
+ 
+h6{
+    text-align: center;
+    font-weight: 600;
+}
+
+.course-col2:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+
+ @media(max-width: 750px){
+     .row2{
+         flex-direction: column;
+     }
+ }
+
+
+/*-------x----2nd------------x---------*/
+
+
+/*-------x---------About us page------------x-------------*/
+
+
+/*------------------------Site Title contact us -----------------------------*/
+
+/*------------------------header-contact -----------------------------*/
+main .contact{
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../assets/background\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
+.contact-background{
+    padding-top: 8rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 4rem;
+    font-family: var(--Josefin);
+    font-weight: 800;
+}
+/*-------------x----------header-contact ----------x------------------*/
+
+/*--------------------------location----------------------------*/
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+/*----------------x---------location-----------------x----------*/
+
+/*-------------------------contacts---------------------------*/
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+} 
+
+
+
+.contact-col .fa{
+   font-size: 28px;
+   color: #f44336;
+   margin: 10px;
+   margin-right: 30px;
+}
+
+.contact-col p{
+    padding: 0%;
+    font-size: 19px;
+}
+
+.contact-col h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+    
+
+
+
+
+
+
+
+/*----------------x--------contacts--------------x------------*/
+
+
+
+
+/*------------x-----------Site Title contact us -------------x---------------*/
+
